@@ -30,7 +30,7 @@ def main(args):
         
         suma += a
         print(suma)
-         a= int(input("podaj liczbę: "))
+         a = int(input("podaj liczbę: "))
          
         print()
         print("suma liczb")

@@ -29,6 +29,7 @@ def main(args):
     s = int(input("podaj ostatni element zbioru "))
     e = int(input("podaj krok "))
     
+    
     for i in range (n , s ,e):
         suma += i
     print()

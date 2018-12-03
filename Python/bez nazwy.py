@@ -32,7 +32,7 @@ def liczby2():
             elif i==j:
                 licznik = licznik +1 
     print(licznik)
-                
+            
 
 def main(args):
     liczby2()

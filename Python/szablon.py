@@ -17,3 +17,4 @@ def main(args):
         else:
             print ("nie da się zbudować trójkąta")
 
+

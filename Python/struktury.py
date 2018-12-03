@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  lotek.py
+#  struktury.py
 #  
 #  Copyright 2018  <>
 #  
@@ -21,28 +21,51 @@
 #  MA 02110-1301, USA.
 #  
 #  
-import random
+def kolejka():
+    
+    from collections import deque
+    kolejka = deque([])
+    
+    def push(el):
+        kolejka.append(el)
+    def pop():
+        if len(kolejka):
+            return kolejka.popleft()
+        
+        else:
+            print("błąd kolejki!")
+            return None
+    push(5)
+    push(4)
+    print(pop())
+    print(pop())
+    print(pop())
+def stos():
+    stos = []
+    
+    def push(el):
+        stos.append(el)
+    
+    def pop():
+        
+        if len(stos):
+            return stos.pop()
+        
+        else:
+            print("błąd stosu!")
+            return None
+    
+    push(5)
+    push(4)
+    
+    
+    print(pop())
+    print(pop())
+    print(pop())
 
 def main(args):
-    n=int(input("ile liczb"))
-    #for i in range(3):
-    while n:
-        liczby = random.randint(0.10)
-        if not liczby.count(liczba):
-            liczby.append(liczba)
-            iliczb-= 1
-    print(liczby)
-    ileliczb = len(liczby)
-    typy = set()
-    while ilelizb:
-        typ=input("podaj typy: ")
-        if typy not in typy:
-            typy.add(typ)
-            ileliczb -= 1
-    print(typy)
-        
-                
-                
+    
+    kolejka()
     return 0
 
 if __name__ == '__main__':
