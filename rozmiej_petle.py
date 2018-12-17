@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  osoba_obj.py
+#  rozmiej_petle.py
 #  
 #  Copyright 2018  <>
 #  
@@ -21,28 +21,33 @@
 #  MA 02110-1301, USA.
 #  
 #  
+suma=0
+def cw1(a,suma):
+    
+    while (suma > 75):
+        
+        a = input("podaj liczbę: ")
+        
+        suma += a
 
-class Osoba():
-    """prosta klasa opisująca osobę"""
+        
+def cw2():
+    n=0
+    for i in range(1,n):
+        n+1
+        print(i)  
+       
+        
+        
     
-    def __init__(self, imie, nazwisko, wiek=0):
-        self.imie = imie
-        self.nazwisko = nazwisko
-        self.ustawPlec()
-        self.wiek = wiek
-    def ustawPlec(self):
-        if self.imie[-1]=="a":
-            self.plec= "k"
-        else:
-            self.plec = "m"
-            
+    
+        
+
+
 def main(args):
-    
-    o1 = Osoba("dariusz", "gielski")
-    o2 = Osoba("ewa", "kos")
-    print(o1.imie, o1.nazwisko, o1.plec)
-    print(o2.imie, o2.nazwisko, o2.plec)
-    
+    a = input("podaj liczbę: ")
+    cw1(a,suma)
+    print(suma)
     return 0
 
 if __name__ == '__main__':

@@ -21,28 +21,55 @@
 #  MA 02110-1301, USA.
 #  
 #  
-from osoba_obj import Osoba
 from datetime import date
-class Kierowca:
+from osoba_obj import Osoba
+
+class Kierowca(Osoba):
+    
+    __licznik = 0
+    
     def __init__(self, imie, nazwisko, kategoria):
-        super(),__init__(imie nazwisko)
+    
+        super().__init__(imie, nazwisko)
+    
         self.kategoria = kategoria
+        
+        Kierowca.licznik +=1
         
 class Samochod:
     
-    def __init__(marka, model, rok_produkcji):
+    def __init__(self, marka, model, rocznik):
+    
         self.marka=marka
+    
         self.model=model
-        self.rok_produkcji=rocznik
-        self.kierowca = kierowca
+    
+        self.rok=rocznik
+    
+        
+    
     def wiek(self):
+    
         return dzis.year - self.rok
     
 
 
 def main(args):
-    s1 = Samochod("fiat", "tipo", "2002")
-    print(s1.model,s1.wiek())
+    
+    s1 = Samochod("porhe", "tiger", "1939")
+    
+    s2 = samochod("skoda", "skoda_t-25","1940" )
+    
+    
+    print(s1.model, s1.wiek, s1.marka)
+    
+    k1 = kierowca("adam", "Słodowy", "b")
+    
+    k2 = kierowca("julianus", "gajkowus")
+    print(k1. imie, nazwisko, kategoria)
+    
+    del(k1)
+    del(k2)
     return 0
 
 if __name__ == '__main__':
