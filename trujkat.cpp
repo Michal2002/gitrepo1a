@@ -40,13 +40,29 @@ int main(int argc, char **argv){
         if(liczba2+liczba3 >liczba1){
             if(liczba1+liczba3 >liczba2){
                 cout<<"dany trójkąt istnieje";
-            else(cout<<"dany trójkąt nieistniejw");
-    
-    
+    else(cout<<"dany trójkąt nieistniejew");
+    if(liczba2+liczba3 >liczba1){
+        if(liczba1+liczba2 >liczba3){
+            if(liczba1+liczba3 >liczba2){
+                cout<<"dany trójkąt istnieje";
+    else(cout<<"dany trójkąt nieistniejew");
+    if(liczba1+liczba3 >liczba2){
+        if(liczba1+liczba2 >liczba3){
+            if(liczba2+liczba3 >liczba1){
+                cout<<"dany trójkąt istnieje";
+    else(cout<<"dany trójkąt nieistniejew");
     }
     }
+    }
+ }
+    }
+    
+
+} }
+    
     }
 
+}
 }
 {
 return 0;
