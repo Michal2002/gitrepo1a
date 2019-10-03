@@ -1,5 +1,5 @@
 /*
- * prostokat.cpp
+ * funkcje.cpp
  * 
  * Copyright 2019  <>
  * 
@@ -22,51 +22,43 @@
  */
 
 
-
 #include <iostream>
-#include <iomanip>
 using namespace std;
-
-void prostokat(int x, int y) {
-    int i, j;
-	for (i=1; i <=x; i++){
-        for (j=1; j<=y; j++) {
-                cout<< "#";
-        }
-        cout << endl;
-    }
+void iloraz(int a, int b)
+{
+    if(b!=0)
+        cout <<"iloraz: "<< a / b<<endl;
+    else
+        cout<<"niedziel przez zero";
 }
-
-void pustak(int x, int y, char z){
-    int i, j;
-	for (i=1; i <=x; i++){
-        for (j=1; j<=y; j++) {
-            if(i==1 || i==x)
-                cout<< z ;
-                        
-            else if(j==1 || j == y)
-                cout<< z ;
-            else
-                cout << " ";
-                    
-                    
-                
-        }
-        cout << endl; 
-       } 
-    
-
-
-  }  
+int pomnoz(int a, int b)
+{
+        return a*b;
+} 
+void sumuj(int a, int b)
+{
+    cout <<"suma: "<< a+b << endl;
+}
+int odejmij(int a, int b)
+{
+    return a-b;
+}
 int main(int argc, char **argv)
 {
     int a, b;
-    char znak;
-    cout<<"podaj rozmiar x, y: ";
-    cin>> a >>b;
-    cout << "podaj znak:";
-    cin>> znak;
-    pustak(a, b, znak);
+    cout<<"podaj liczby:"<< endl;
+    cin>> a >> b;
+	sumuj(a, b);
+    sumuj(b, a);
+    iloraz(a, b);
+    int wynik2;
+    wynik2 = odejmij(a, b)
+    
+    cout<< "rurznica: "<< odejmij(a, b) <<endl;
+    int wynik;
+    wynik = pomnoz(a, b);
+    cout<< "iloczyn: "<< wynik;
+    
 	return 0;
 }
 
