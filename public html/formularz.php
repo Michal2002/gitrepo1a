@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm fixed-top bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" href="http://lo1.sandomierz.pl">I LO CG</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -27,27 +27,34 @@
         </div>
     </nav>
     <div class="container-fluid">
-    	<div class="row">
-    		<div class="col">
+    		<div class="row">
+    			<div class="col">
 <?php
 
-echo'<h2>Przetwarzanie formularza</h'
+echo '<h2>Przetwarzanie formularza</h2>';
 print_r($_POST);
-if(iss($_POST['login']))
-	echo'<p>Witaj'.$_POST['login'].'</p>'
+
+foreach ($v as $k => $value) {
+	# code...
+}
+
+if (isset($_POST['login']))
+	echo '<p>Witaj '.$_POST['login'].'</p>';
 else
-	echo'<p>Zaloguj się!</p>'
+	echo '<p>Zaloguj się!</p>';
+
 ?>
-					</div>
-				</div>
+
+    			</div>
+    		</div>
         <div class="row">
-        		<div class="col-3">&nbsp;</div>
+            <div class="col-3">&nbsp;</div>
             <div class="col">
                 <h1 class="text-center">
                     Formularz<small>– w Bootstrapie</small>
                 </h1>
                 <hr>
-                <form action="formularz.html" method="POST" name="dane" id="dane">
+                <form action="formularz.php" method="POST" name="dane" id="dane">
                     <input type="hidden" name="id_user" value="10">
                     <div class="form-group">
                         <label for="login">Login:</label>
@@ -92,6 +99,7 @@ else
                     <input type="submit" value="Wyślij" class="btn btn-primary">
                 </form>
             </div>
+            <div class="col-3">&nbsp;</div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
