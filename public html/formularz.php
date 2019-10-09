@@ -34,13 +34,19 @@
 echo '<h2>Przetwarzanie formularza</h2>';
 print_r($_POST);
 
-foreach ($v as $k => $value) {
-	# code...
-}
+//$login = trim($_POST['login']);
+//$email = trim($_POST['email'])
+foreach ($_POST as $k => $v) {
+	echo $k.''.$v.'<br>';
 
-if (isset($_POST['login']))
-	echo '<p>Witaj '.$_POST['login'].'</p>';
-else
+	${$k} = htmlspecialchars(trim($v))
+if(strlen($V)>15)
+		$V =subster($V, 0, 14)
+}
+if (isset($_login)){
+	echo '<p>Witaj '.$login.'</p>';
+	echo '<p>Twoje hasło: '.$haslo.'</p>';
+}else
 	echo '<p>Zaloguj się!</p>';
 
 ?>
@@ -58,7 +64,7 @@ else
                     <input type="hidden" name="id_user" value="10">
                     <div class="form-group">
                         <label for="login">Login:</label>
-                        <input type="text" name="login" id="login" class="form-control">
+                        <input type="text" name="login" id="login" class="form-control" maxlength="15">
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
