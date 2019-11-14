@@ -1,5 +1,5 @@
 /*
- * palim_to.cpp
+ * palindrom.cpp
  * 
  * Copyright 2019  <>
  * 
@@ -23,17 +23,46 @@
 
 
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 bool czypalindrom(char tab[])
 {
+    int rozmiar = strlen(tab);
+    for(int i=0 ;i < rozmiar / 2 ;i++)
+    {
+        if (tab[i]==tab[rozmiar - i - 1])
+            continue;
+        else
+            return false;
+        
+         
+    }
+    return true;
+} 
+void removespace(char tab1[])
+{
+    int rozmiar = strlen(tab);
+    for(int i=0 ;i < rozmiar / 2 ;i++)
+    if(tab1[i] != ' ')
     
-}
+    
+} 
 int main(int argc, char **argv)
 {
     int r =20;
-    char napis[r];
-    cin.getline(napis, 20)>>napis;
+    char napis1[r];
+    char napis2[r];
+    cin.getline(napis, 20);
+    removespace(napis1, napis2);
+    if(czypalindrom(napis))
+    {
+        cout<<"========================================================"
+        cout<<"to palindrom!"<<endl;
+    }
+    else
+        cout<<"========================================================"
+        cout<<"to nie palindrom"<<endl;
     cout<<napis;
 	
 	return 0;
