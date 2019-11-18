@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    
+<meta charset="utf-8" />
+<title>algorytm euklidesa</title>
+<meta name="generator" content="Geany 1.32" />
+</head>
+
+<body>
+<h1>Algorytm euklidesa</h1>
+<div>
+    <label>a:</label>
+    <input type="text" id="a">
+    <br>
+    <label>b:</label>
+    <input type="text" id="b">
+    <br>
+    <button id ="oblicz" onclick="nwd1()">oblicz NWD</button>
+    
+    <p class="wynik"></p>
+</div>
+<script type="text/javascript">
+    function nwd1()
+    {
+        a = document.getElementById("a").value;
+        b = document.getElementById("b").value;
+        a = parseInt(a);
+        b = parseInt(b);
+        whilea(a!=b)
+        {
+            if(a>b)
+                a = a-b;
+            else
+                b = b-a;
+        }
+        //alert("Nwd = " + a);
+        w=document.getelementsByClassName("wynik");
+        w[0].innerHTML ="Nwd =" +a;
+    }
+        
+    
+</script>
+Nwd(100, 5) = 5
+</body>
+
+</html>
