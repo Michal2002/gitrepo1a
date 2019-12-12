@@ -1,5 +1,5 @@
 /*
- * hivonacci.cxx
+ * silnia.cpp
  * 
  * Copyright 2019  <>
  * 
@@ -24,37 +24,45 @@
 
 #include <iostream>
 using namespace std;
-int fibonacci_it(int n)
+
+long int silnia_it(int n)
 {
-    int a = 0;
-    int b = 1;
-    int wynik = 0;
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    for(int i = 2;i<n; i++)
+    
+    long int silnia = 1;
+    
+    for(int i=2; i< n+1; i++)
+    
     {
-        wynik = a + b ;
-        cout<< i <<": fib("<< b<<", "<< a <<") = "<< wynik<<endl;
-        b = a;
-        a = wynik;
+        silnia = silnia *i;
+        
+        }
+        
+        return silnia;
+    
+    }
+
+long int silnia_re(int n)
+
+{
+
+    if(n==0)
+
+        return 1;
+
+    else
+
+        return silnia_re(n-1)*n;
         
     }
-    return wynik;
-}
-int fibonacci_re(int n)
-{
-    if(n<2)
-        return 1;
-    else
-        return fibonacci_re(n-1)+fibonacci_re(n-2);
-    }
-int main(int argc, char **argv)
-{
-    //for(int)
-	fibonacci_re(69999999);
-	
-    
-    return 0;
-}
 
+int main(int argc, char **argv)
+
+{ 
+    int n;
+    cout<<"podaj n: "<<endl;
+    cin>>n;
+    cout<<"silnia: "<<silnia_it(n)<<endl;
+	cout<<"silnia: "<<silnia_re(n)<<endl;
+	return 0;
+}
 

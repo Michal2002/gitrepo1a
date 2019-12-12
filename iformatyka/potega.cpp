@@ -1,5 +1,5 @@
 /*
- * hivonacci.cxx
+ * silnia.cpp
  * 
  * Copyright 2019  <>
  * 
@@ -24,37 +24,43 @@
 
 #include <iostream>
 using namespace std;
-int fibonacci_it(int n)
+
+long int potenga_it(int n, float x)
 {
-    int a = 0;
-    int b = 1;
-    int wynik = 0;
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    for(int i = 2;i<n; i++)
-    {
-        wynik = a + b ;
-        cout<< i <<": fib("<< b<<", "<< a <<") = "<< wynik<<endl;
-        b = a;
-        a = wynik;
+    
+    float potenga =1 ;
+    for(int i=0; i<n; i++)
+    { 
+        potenga=potenga * x;
+    }
+    return potenga;
+}
+long int potenga_re(int n, float x)
+
+{
+
+    if(n==0)
+
+        return 1;
+
+    else
+
+        return potenga_re(x,n-1)*x;
         
     }
-    return wynik;
-}
-int fibonacci_re(int n)
-{
-    if(n<2)
-        return 1;
-    else
-        return fibonacci_re(n-1)+fibonacci_re(n-2);
-    }
-int main(int argc, char **argv)
-{
-    //for(int)
-	fibonacci_re(69999999);
-	
-    
-    return 0;
-}
 
+int main(int argc, char **argv)
+
+{ 
+    int n;
+    float x;
+    
+    cout<<"podaj x pod: "<<endl;
+    cin>>x;
+    cout<<"podaj n : "<<endl;
+    cin>>n;
+    cout<<"potęga: "<<potenga_it(n,x)<<endl;
+	cout<<"potęga: "<<potenga_re(n,x)<<endl;
+	return 0;
+}
 
