@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+    <title>strona nieodpowiada</title>
+</head>
+
+<body>
+    
+<h1>obliczanie kompresji</h1>
+
+<div>
+    <label>przed kompresją:</label>
+    <input type="text" id="a">
+    
+    <br>
+     <label>po kompresji:</label>
+    <input type="text" id="b">
+    
+    <br>
+    <button onclick="zip()">Oblicz rozmiar po kompresji</button>
+    <hr>
+</div>
+
+<script type="text/javascript">
+    function zip() {
+        a = document.getElementById("a").value;
+        b = document.getElementById("b").value;
+        if (a > b)
+            c=a-b;
+            d=c/a*100;
+        else
+   
+    
+    }
+</script>
+
+</body>
+
+</html>

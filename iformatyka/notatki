@@ -1,0 +1,18 @@
+kompilowanie(C++, kompilator, linker)
+interpreter(python, java script, PHP)
+wprowadzqanie danych textowych: print(), echo(), echo
+rozszerzenie kodu php po stronie witryny www - .php
+witryna www nie przetwarza przez interpreter pojedyńczego kodu html
+dane które zmieniają baze danych z formularza - POST
+w skrypcie php dane z formularza logowania dostempne są w _tablicy $_POST
+walidacja danych polega na rzywaniu odpowiednich atrybutów HTML5 w formularzach
+oraz sprawdzanie czy dane spełniają kryteria
+Jawa Script morzna urzywać po stronie klijęta
+sprawdzanie poprawności loginu i chasła to przykład autentyfikacji i walidazji
+do sprawdzania czy zmienna istnieje i nie jast wartością NULL-isset()
+funkcja array_key_exist sprawdza-czy w tabeliwystępuje dany klucz
+jerzeli sprawdzamy czy zmienna istnieje- empty()
+do sprawdzania poprawności danych-sterlen(), trim(), htmlspecjalchars()
+zmienne w PHP-są tworzone w momęcie pierwszego urzycia
+do tworzenia zmiennych urzyjemy-${$zmienna}='wartośc'
+jerzeli w formularzu html typu post mamy pole o nazwie"kod"-$_POST['kod']
